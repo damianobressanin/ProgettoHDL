@@ -1,0 +1,10 @@
+Per svolgere tutte le 18 operazioni impiego 7 cicli di clock
+
+Scheduling finale:
+Nel ciclo di clock numero 1 verranno effettuate le seguenti operazioni: m o c b a 
+Nel ciclo di clock numero 2 verranno effettuate le seguenti operazioni: l n e 
+Nel ciclo di clock numero 3 verranno effettuate le seguenti operazioni: k d f 
+Nel ciclo di clock numero 4 verranno effettuate le seguenti operazioni: q g 
+Nel ciclo di clock numero 5 verranno effettuate le seguenti operazioni: r h 
+Nel ciclo di clock numero 6 verranno effettuate le seguenti operazioni: j i 
+Nel ciclo di clock numero 7 verranno effettuate le seguenti operazioni: p 

@@ -1,0 +1,447 @@
+LETTURA DEI COMPONENTI DA TASTIERA
+Hai 5 componenti che fanno somme e sottrazioni
+Hai 2 componenti che fanno moltiplicazioni
+Hai 1 componenti che fanno divisioni
+
+
+INPUT DA FILE DI TESTO
+Ecco le 18 righe dal file di testo:
+Riga numero 1:	p:=i+j;
+Riga numero 2:	j:=k*r;
+Riga numero 3:	r:=q-l;
+Riga numero 4:	l:=alpha*m;
+Riga numero 5:	q:=k/beta;
+Riga numero 6:	m:=gamma-delta;
+Riga numero 7:	k:=epsilon/n;
+Riga numero 8:	n:=o+o;
+Riga numero 9:	o:=zeta-eta;
+Riga numero 10:	d:=theta+n;
+Riga numero 11:	c:=alpha+kappa;
+Riga numero 12:	b:=lambda-mu;
+Riga numero 13:	a:=xi*pi;
+Riga numero 14:	e:=a*b;
+Riga numero 15:	h:=e/f;
+Riga numero 16:	i:=h-g;
+Riga numero 17:	f:=e+c;
+Riga numero 18:	g:=f+d;
+
+
+ANALIZZO LE RIGHE DEL FILE DI TESTO E COLLEGO I NODI
+Riga 1
+sx = p
+dx = i+j
+operazione = +
+uno = i
+due = j
+i appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo p il nodo i e aggiungo nelle partenze del nodo i il nodo p
+j appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo p il nodo j e aggiungo nelle partenze del nodo j il nodo p
+
+Riga 2
+sx = j
+dx = k*r
+operazione = *
+uno = k
+due = r
+k appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo j il nodo k e aggiungo nelle partenze del nodo k il nodo j
+r appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo j il nodo r e aggiungo nelle partenze del nodo r il nodo j
+
+Riga 3
+sx = r
+dx = q-l
+operazione = -
+uno = q
+due = l
+q appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo r il nodo q e aggiungo nelle partenze del nodo q il nodo r
+l appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo r il nodo l e aggiungo nelle partenze del nodo l il nodo r
+
+Riga 4
+sx = l
+dx = alpha*m
+operazione = *
+uno = alpha
+due = m
+m appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo l il nodo m e aggiungo nelle partenze del nodo m il nodo l
+
+Riga 5
+sx = q
+dx = k/beta
+operazione = /
+uno = k
+due = beta
+k appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo q il nodo k e aggiungo nelle partenze del nodo k il nodo q
+
+Riga 6
+sx = m
+dx = gamma-delta
+operazione = -
+uno = gamma
+due = delta
+
+Riga 7
+sx = k
+dx = epsilon/n
+operazione = /
+uno = epsilon
+due = n
+n appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo k il nodo n e aggiungo nelle partenze del nodo n il nodo k
+
+Riga 8
+sx = n
+dx = o+o
+operazione = +
+uno = o
+due = o
+o appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo n il nodo o e aggiungo nelle partenze del nodo o il nodo n
+o appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo n il nodo o e aggiungo nelle partenze del nodo o il nodo n
+
+Riga 9
+sx = o
+dx = zeta-eta
+operazione = -
+uno = zeta
+due = eta
+
+Riga 10
+sx = d
+dx = theta+n
+operazione = +
+uno = theta
+due = n
+n appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo d il nodo n e aggiungo nelle partenze del nodo n il nodo d
+
+Riga 11
+sx = c
+dx = alpha+kappa
+operazione = +
+uno = alpha
+due = kappa
+
+Riga 12
+sx = b
+dx = lambda-mu
+operazione = -
+uno = lambda
+due = mu
+
+Riga 13
+sx = a
+dx = xi*pi
+operazione = *
+uno = xi
+due = pi
+
+Riga 14
+sx = e
+dx = a*b
+operazione = *
+uno = a
+due = b
+a appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo e il nodo a e aggiungo nelle partenze del nodo a il nodo e
+b appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo e il nodo b e aggiungo nelle partenze del nodo b il nodo e
+
+Riga 15
+sx = h
+dx = e/f
+operazione = /
+uno = e
+due = f
+e appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo h il nodo e e aggiungo nelle partenze del nodo e il nodo h
+f appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo h il nodo f e aggiungo nelle partenze del nodo f il nodo h
+
+Riga 16
+sx = i
+dx = h-g
+operazione = -
+uno = h
+due = g
+h appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo i il nodo h e aggiungo nelle partenze del nodo h il nodo i
+g appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo i il nodo g e aggiungo nelle partenze del nodo g il nodo i
+
+Riga 17
+sx = f
+dx = e+c
+operazione = +
+uno = e
+due = c
+e appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo f il nodo e e aggiungo nelle partenze del nodo e il nodo f
+c appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo f il nodo c e aggiungo nelle partenze del nodo c il nodo f
+
+Riga 18
+sx = g
+dx = f+d
+operazione = +
+uno = f
+due = d
+f appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo g il nodo f e aggiungo nelle partenze del nodo f il nodo g
+d appartiene alla lista dei nodi, quindi mi interessa per lo scheduling
+Aggiungo negli arrivi del nodo g il nodo d e aggiungo nelle partenze del nodo d il nodo g
+
+
+SCHEDULING
+Il nodo p è il nodo radice perché ha 0 partenze
+
+Ecco le informazioni di ogni nodo prima di procedere con lo scheduling
+nome=p	 operazione=+	 radice=true	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:i j 
+nome=j	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:k r 	 partenze:p 
+nome=r	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:q l 	 partenze:j 
+nome=l	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:m 	 partenze:r 
+nome=q	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:k 	 partenze:r 
+nome=m	 operazione=-	 radice=false	 foglia=true	 cp=0	 schedulato=false	 clock=0		 partenze:l 
+nome=k	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:n 	 partenze:j q 
+nome=n	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:o o 	 partenze:k d 
+nome=o	 operazione=-	 radice=false	 foglia=true	 cp=0	 schedulato=false	 clock=0		 partenze:n n 
+nome=d	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:n 	 partenze:g 
+nome=c	 operazione=+	 radice=false	 foglia=true	 cp=0	 schedulato=false	 clock=0		 partenze:f 
+nome=b	 operazione=-	 radice=false	 foglia=true	 cp=0	 schedulato=false	 clock=0		 partenze:e 
+nome=a	 operazione=*	 radice=false	 foglia=true	 cp=0	 schedulato=false	 clock=0		 partenze:e 
+nome=e	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:a b 	 partenze:h f 
+nome=h	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:e f 	 partenze:i 
+nome=i	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:h g 	 partenze:p 
+nome=f	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:e c 	 partenze:h g 
+nome=g	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:f d 	 partenze:i 
+
+Ecco il clone di lista_nodi prima dello scheduling
+nome=p	 operazione=+	 radice=true	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:i j 
+nome=j	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:k r 	 partenze:p 
+nome=r	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:q l 	 partenze:j 
+nome=l	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:m 	 partenze:r 
+nome=q	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:k 	 partenze:r 
+nome=m	 operazione=-	 radice=false	 foglia=true	 cp=0	 schedulato=false	 clock=0		 partenze:l 
+nome=k	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:n 	 partenze:j q 
+nome=n	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:o o 	 partenze:k d 
+nome=o	 operazione=-	 radice=false	 foglia=true	 cp=0	 schedulato=false	 clock=0		 partenze:n n 
+nome=d	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:n 	 partenze:g 
+nome=c	 operazione=+	 radice=false	 foglia=true	 cp=0	 schedulato=false	 clock=0		 partenze:f 
+nome=b	 operazione=-	 radice=false	 foglia=true	 cp=0	 schedulato=false	 clock=0		 partenze:e 
+nome=a	 operazione=*	 radice=false	 foglia=true	 cp=0	 schedulato=false	 clock=0		 partenze:e 
+nome=e	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:a b 	 partenze:h f 
+nome=h	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:e f 	 partenze:i 
+nome=i	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:h g 	 partenze:p 
+nome=f	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:e c 	 partenze:h g 
+nome=g	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:f d 	 partenze:i 
+
+Sto entrando nel ciclo do-while che determina lo scheduling delle operazioni
+
+Sono al ciclo di clock numero 1
+Ho trovato 5 foglie:
+Il nodo foglia m ha critical path = 4
+Il nodo foglia o ha critical path = 6
+Il nodo foglia c ha critical path = 4
+Il nodo foglia b ha critical path = 5
+Il nodo foglia a ha critical path = 5
+Lista delle foglie ordinata per critical path in modo decrescente:
+Il nodo foglia o ha critical path = 6
+Il nodo foglia b ha critical path = 5
+Il nodo foglia a ha critical path = 5
+Il nodo foglia m ha critical path = 4
+Il nodo foglia c ha critical path = 4
+Provo a schedulare tutte le foglie:
+Ho schedulato con successo l'operazione o
+Ho schedulato con successo l'operazione b
+Ho schedulato con successo l'operazione a
+Ho schedulato con successo l'operazione m
+Ho schedulato con successo l'operazione c
+In questo ciclo di clock ho trovato: 4 somme e sottrazioni; 1 moltiplicazioni; 0 divisioni
+Elimino i nodi foglia schedulati:
+Rimuovo o perché è appena stato schedulato
+Rimuovo b perché è appena stato schedulato
+Rimuovo a perché è appena stato schedulato
+Rimuovo m perché è appena stato schedulato
+Rimuovo c perché è appena stato schedulato
+Ecco il clone di lista_nodi alla fine del ciclo di clock numero 1
+nome=p	 operazione=+	 radice=true	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:i j 
+nome=j	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:k r 	 partenze:p 
+nome=r	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:q l 	 partenze:j 
+nome=l	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:r 
+nome=q	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:k 	 partenze:r 
+nome=k	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:n 	 partenze:j q 
+nome=n	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:k d 
+nome=d	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:n 	 partenze:g 
+nome=e	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:h f 
+nome=h	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:e f 	 partenze:i 
+nome=i	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:h g 	 partenze:p 
+nome=f	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:e 	 partenze:h g 
+nome=g	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:f d 	 partenze:i 
+
+Sono al ciclo di clock numero 2
+Ho trovato 3 foglie:
+Il nodo foglia l ha critical path = 3
+Il nodo foglia n ha critical path = 5
+Il nodo foglia e ha critical path = 4
+Lista delle foglie ordinata per critical path in modo decrescente:
+Il nodo foglia n ha critical path = 5
+Il nodo foglia e ha critical path = 4
+Il nodo foglia l ha critical path = 3
+Provo a schedulare tutte le foglie:
+Ho schedulato con successo l'operazione n
+Ho schedulato con successo l'operazione e
+Ho schedulato con successo l'operazione l
+In questo ciclo di clock ho trovato: 1 somme e sottrazioni; 2 moltiplicazioni; 0 divisioni
+Elimino i nodi foglia schedulati:
+Rimuovo n perché è appena stato schedulato
+Rimuovo e perché è appena stato schedulato
+Rimuovo l perché è appena stato schedulato
+Ecco il clone di lista_nodi alla fine del ciclo di clock numero 2
+nome=p	 operazione=+	 radice=true	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:i j 
+nome=j	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:k r 	 partenze:p 
+nome=r	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:q 	 partenze:j 
+nome=q	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:k 	 partenze:r 
+nome=k	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:j q 
+nome=d	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:g 
+nome=h	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:f 	 partenze:i 
+nome=i	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:h g 	 partenze:p 
+nome=f	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:h g 
+nome=g	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:f d 	 partenze:i 
+
+Sono al ciclo di clock numero 3
+Ho trovato 3 foglie:
+Il nodo foglia k ha critical path = 4
+Il nodo foglia d ha critical path = 3
+Il nodo foglia f ha critical path = 3
+Lista delle foglie ordinata per critical path in modo decrescente:
+Il nodo foglia k ha critical path = 4
+Il nodo foglia d ha critical path = 3
+Il nodo foglia f ha critical path = 3
+Provo a schedulare tutte le foglie:
+Ho schedulato con successo l'operazione k
+Ho schedulato con successo l'operazione d
+Ho schedulato con successo l'operazione f
+In questo ciclo di clock ho trovato: 2 somme e sottrazioni; 0 moltiplicazioni; 1 divisioni
+Elimino i nodi foglia schedulati:
+Rimuovo k perché è appena stato schedulato
+Rimuovo d perché è appena stato schedulato
+Rimuovo f perché è appena stato schedulato
+Ecco il clone di lista_nodi alla fine del ciclo di clock numero 3
+nome=p	 operazione=+	 radice=true	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:i j 
+nome=j	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:r 	 partenze:p 
+nome=r	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:q 	 partenze:j 
+nome=q	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:r 
+nome=h	 operazione=/	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:i 
+nome=i	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:h g 	 partenze:p 
+nome=g	 operazione=+	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:i 
+
+Sono al ciclo di clock numero 4
+Ho trovato 3 foglie:
+Il nodo foglia q ha critical path = 3
+Il nodo foglia h ha critical path = 2
+Il nodo foglia g ha critical path = 2
+Lista delle foglie ordinata per critical path in modo decrescente:
+Il nodo foglia q ha critical path = 3
+Il nodo foglia h ha critical path = 2
+Il nodo foglia g ha critical path = 2
+Provo a schedulare tutte le foglie:
+Ho schedulato con successo l'operazione q
+L'operazione h sarebbe da schedulare ma non ho abbastanza componenti per le divisioni
+Ho schedulato con successo l'operazione g
+In questo ciclo di clock ho trovato: 1 somme e sottrazioni; 0 moltiplicazioni; 2 divisioni
+Elimino i nodi foglia schedulati:
+Rimuovo q perché è appena stato schedulato
+Rimuovo g perché è appena stato schedulato
+Ecco il clone di lista_nodi alla fine del ciclo di clock numero 4
+nome=p	 operazione=+	 radice=true	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:i j 
+nome=j	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:r 	 partenze:p 
+nome=r	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:j 
+nome=h	 operazione=/	 radice=false	 foglia=true	 cp=2	 schedulato=false	 clock=0		 partenze:i 
+nome=i	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:h 	 partenze:p 
+
+Sono al ciclo di clock numero 5
+Ho trovato 2 foglie:
+Il nodo foglia r ha critical path = 2
+Il nodo foglia h ha critical path = 2
+Lista delle foglie ordinata per critical path in modo decrescente:
+Il nodo foglia r ha critical path = 2
+Il nodo foglia h ha critical path = 2
+Provo a schedulare tutte le foglie:
+Ho schedulato con successo l'operazione r
+Ho schedulato con successo l'operazione h
+In questo ciclo di clock ho trovato: 1 somme e sottrazioni; 0 moltiplicazioni; 1 divisioni
+Elimino i nodi foglia schedulati:
+Rimuovo r perché è appena stato schedulato
+Rimuovo h perché è appena stato schedulato
+Ecco il clone di lista_nodi alla fine del ciclo di clock numero 5
+nome=p	 operazione=+	 radice=true	 foglia=false	 cp=0	 schedulato=false	 clock=0		 arrivi:i j 
+nome=j	 operazione=*	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:p 
+nome=i	 operazione=-	 radice=false	 foglia=false	 cp=0	 schedulato=false	 clock=0		 partenze:p 
+
+Sono al ciclo di clock numero 6
+Ho trovato 2 foglie:
+Il nodo foglia j ha critical path = 1
+Il nodo foglia i ha critical path = 1
+Lista delle foglie ordinata per critical path in modo decrescente:
+Il nodo foglia j ha critical path = 1
+Il nodo foglia i ha critical path = 1
+Provo a schedulare tutte le foglie:
+Ho schedulato con successo l'operazione j
+Ho schedulato con successo l'operazione i
+In questo ciclo di clock ho trovato: 1 somme e sottrazioni; 1 moltiplicazioni; 0 divisioni
+Elimino i nodi foglia schedulati:
+Rimuovo j perché è appena stato schedulato
+Rimuovo i perché è appena stato schedulato
+Ecco il clone di lista_nodi alla fine del ciclo di clock numero 6
+nome=p	 operazione=+	 radice=true	 foglia=false	 cp=0	 schedulato=false	 clock=0	
+
+Sono al ciclo di clock numero 7
+Ho trovato 1 foglie:
+Il nodo foglia p ha critical path = 0
+Lista delle foglie ordinata per critical path in modo decrescente:
+Il nodo foglia p ha critical path = 0
+Provo a schedulare tutte le foglie:
+Ho schedulato con successo l'operazione p
+In questo ciclo di clock ho trovato: 1 somme e sottrazioni; 0 moltiplicazioni; 0 divisioni
+Elimino i nodi foglia schedulati:
+Rimuovo p perché è appena stato schedulato
+Ecco il clone di lista_nodi alla fine del ciclo di clock numero 7
+
+CONCLUSIONI E RISULTATO
+Ecco le informazioni di ogni nodo dopo aver eseguito lo scheduling
+nome=p	 operazione=+	 radice=true	 foglia=true	 cp=0	 schedulato=true	 clock=7	
+nome=j	 operazione=*	 radice=false	 foglia=true	 cp=1	 schedulato=true	 clock=6		 partenze:p 
+nome=r	 operazione=-	 radice=false	 foglia=true	 cp=2	 schedulato=true	 clock=5		 partenze:j 
+nome=l	 operazione=*	 radice=false	 foglia=true	 cp=3	 schedulato=true	 clock=2		 partenze:r 
+nome=q	 operazione=/	 radice=false	 foglia=true	 cp=3	 schedulato=true	 clock=4		 partenze:r 
+nome=m	 operazione=-	 radice=false	 foglia=true	 cp=4	 schedulato=true	 clock=1		 partenze:l 
+nome=k	 operazione=/	 radice=false	 foglia=true	 cp=4	 schedulato=true	 clock=3		 partenze:j q 
+nome=n	 operazione=+	 radice=false	 foglia=true	 cp=5	 schedulato=true	 clock=2		 partenze:k d 
+nome=o	 operazione=-	 radice=false	 foglia=true	 cp=6	 schedulato=true	 clock=1		 partenze:n n 
+nome=d	 operazione=+	 radice=false	 foglia=true	 cp=3	 schedulato=true	 clock=3		 partenze:g 
+nome=c	 operazione=+	 radice=false	 foglia=true	 cp=4	 schedulato=true	 clock=1		 partenze:f 
+nome=b	 operazione=-	 radice=false	 foglia=true	 cp=5	 schedulato=true	 clock=1		 partenze:e 
+nome=a	 operazione=*	 radice=false	 foglia=true	 cp=5	 schedulato=true	 clock=1		 partenze:e 
+nome=e	 operazione=*	 radice=false	 foglia=true	 cp=4	 schedulato=true	 clock=2		 partenze:h f 
+nome=h	 operazione=/	 radice=false	 foglia=true	 cp=2	 schedulato=true	 clock=5		 partenze:i 
+nome=i	 operazione=-	 radice=false	 foglia=true	 cp=1	 schedulato=true	 clock=6		 partenze:p 
+nome=f	 operazione=+	 radice=false	 foglia=true	 cp=3	 schedulato=true	 clock=3		 partenze:h g 
+nome=g	 operazione=+	 radice=false	 foglia=true	 cp=2	 schedulato=true	 clock=4		 partenze:i 
+
+Per svolgere tutte le 18 operazioni impiego 7 cicli di clock
+
+
+Scheduling finale:
+Nel ciclo di clock numero 1 verranno effettuate le seguenti operazioni: m o c b a 
+Nel ciclo di clock numero 2 verranno effettuate le seguenti operazioni: l n e 
+Nel ciclo di clock numero 3 verranno effettuate le seguenti operazioni: k d f 
+Nel ciclo di clock numero 4 verranno effettuate le seguenti operazioni: q g 
+Nel ciclo di clock numero 5 verranno effettuate le seguenti operazioni: r h 
+Nel ciclo di clock numero 6 verranno effettuate le seguenti operazioni: j i 
+Nel ciclo di clock numero 7 verranno effettuate le seguenti operazioni: p 
